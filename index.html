@@ -3,40 +3,97 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>給田田的想念</title>
+    <title>致田田的忍術密語</title>
     <style>
       body {
         margin: 0;
         height: 100vh;
+        background: url("https://i.pinimg.com/1200x/fb/5f/79/fb5f791c910cb59f5b17f474146f8755.jpg")
+          no-repeat center center;
+        background-size: cover;
         display: flex;
         justify-content: center;
         align-items: center;
-        background: linear-gradient(to right, #ffe3ec, #d8eaff);
-        font-family: "Helvetica Neue", sans-serif;
+        font-family: "Segoe UI", "Noto Sans TC", sans-serif;
+        backdrop-filter: blur(2px);
+      }
+
+      .scroll {
+        background-color: rgba(0, 0, 0, 0.6);
+        color: #f7f7f7;
+        padding: 2.5rem 3rem;
+        border-radius: 1.5rem;
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+        text-align: center;
+        max-width: 600px;
+        animation: fadeIn 2s ease-out;
+        position: relative;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+      }
+
+      .scroll::before {
+        content: "🌸 木葉忍者信";
+        position: absolute;
+        top: -2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 1rem;
+        color: #e0d5ff;
+        letter-spacing: 1px;
+      }
+
+      .symbol {
+        font-size: 3rem;
+        color: #bfaaff;
+        margin-bottom: 1rem;
+        animation: pulse 3s infinite;
       }
 
       .message {
-        font-size: 3rem;
-        color: #ff4d6d;
-        background-color: white;
-        padding: 2rem 3rem;
-        border-radius: 2rem;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        animation: float 3s ease-in-out infinite;
+        font-size: 1.5rem;
+        line-height: 1.8;
       }
 
-      @keyframes float {
-        0%,
-        100% {
+      strong {
+        color: #ffffff;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
           transform: translateY(0);
         }
+      }
+
+      @keyframes pulse {
+        0%,
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
         50% {
-          transform: translateY(-10px);
+          transform: scale(1.1);
+          opacity: 0.85;
         }
       }
     </style>
   </head>
   <body>
-    <div class="message">田田 我想你</div>
+    <div class="scroll">
+      <div class="symbol">💮</div>
+      <div class="message">
+        田田 🥷<br /><br />
+        我不是木葉的日向忍者，<br />
+        但我有雛田一樣的心意。<br />
+        在這寂靜的夜裡，<br />
+        查克拉寫下的話送給你：<br /><br />
+        <strong>「我想你。」</strong><br /><br />
+        ——來自你身邊默默守護的下忍
+      </div>
+    </div>
   </body>
 </html>
